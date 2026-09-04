@@ -5,10 +5,10 @@ import TabContent from '../../TabContent/TabContent.jsx';
 import TAB_BUTTONS from '../../TabButton/data.js';
 import EXAMPLES from '../../TabContent/data.js';
 
-const Tabs = ({tabButtons, children}) => {
+const Tabs = ({ButtonsContainer = "menu", tabButtons, children}) => {
     return (
         <>
-            <menu>{tabButtons}</menu>
+            <ButtonsContainer>{tabButtons}</ButtonsContainer>
             {children}
         </>
     );
