@@ -19,7 +19,7 @@ const Examples = () => {
                 {TAB_BUTTONS.map((item) => (
                     <TabButton
                         key={crypto.randomUUID()}
-                        onClick={() => handleClick(item.toLowerCase())}
+                        onClick= {() => handleClick(item.toLowerCase())}
                         isSelected={clickedButton === item.toLowerCase()}>
                         {item}
                     </TabButton>
