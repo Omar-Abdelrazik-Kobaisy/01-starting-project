@@ -1,8 +1,9 @@
 import {useState} from 'react';
-import TabButton from '../TabButton/TabButton.jsx';
-import TabContent from '../TabContent/TabContent.jsx';
-import TAB_BUTTONS from '../TabButton/data.js';
-import EXAMPLES from '../TabContent/data.js';
+import Section from '../Section.jsx';
+import TabButton from '../../TabButton/TabButton.jsx';
+import TabContent from '../../TabContent/TabContent.jsx';
+import TAB_BUTTONS from '../../TabButton/data.js';
+import EXAMPLES from '../../TabContent/data.js';
 
 const Examples = () => {
     const [clickedButton, setClickedButton] = useState('components');
@@ -13,8 +14,7 @@ const Examples = () => {
         console.log(clickedButton);
     };
     return (
-        <section id='examples'>
-            <h2>Examples</h2>
+        <Section title='Examples' id='examples'>
             <menu>
                 {TAB_BUTTONS.map((item) => (
                     <TabButton
@@ -30,7 +30,7 @@ const Examples = () => {
                     key={crypto.randomUUID()}
                     {...EXAMPLES[clickedButton]} />
             </div>
-        </section>
+        </Section>
     );
 };
 export default Examples;
